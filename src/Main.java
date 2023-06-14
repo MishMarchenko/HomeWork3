@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +14,15 @@ public class Main {
                 System.out.println(unicode());
                 break;
             case 2:
-                System.out.println("tbd2");
+                System.out.println("I'll just run through all the methods, you can see them at the bottom");
+                System.out.println(overload(85));
+                System.out.println(overload(98L));
+                System.out.println(overload('\u2200'));
+                System.out.println(overload(2 == 3));
+                System.out.println(overload(2.5));
+                System.out.println(Arrays.toString(overload(7, 8, 9, 54)));
+                System.out.println(overload(963, 37));
+                System.out.println(overload());
                 break;
             case 3:
                 System.out.println(cubNumber());
@@ -75,5 +85,37 @@ public class Main {
     }
     public static double divide(double a, double b){
         return a / b;
+    }
+    public static String overload(){
+        char q = '\u2243';
+        char w = '\u2244';
+        char e = '\u2245';
+        String a = q + " " + w + " " + e;
+        return a;
+    }
+    public static int overload(int a, int b){
+        return a * b;
+    }
+    public static int overload(int a){
+        return a;
+    }
+    public static long overload(long a){
+        return a;
+    }
+    public static boolean overload(boolean a){
+        return a;
+    }
+    public static char overload(char a){
+        return a;
+    }
+    public static double overload(double a){
+        return a;
+    }
+    public static int[] overload(int ...a){
+        int [] array = new int[a.length];
+        for (int i = 0; i < a.length; i++){
+            array[i] = a[i];
+        }
+        return array;
     }
 }
